@@ -1,0 +1,31 @@
+<div class="row title">
+  <h1>Fuji Water Accessories</h1>
+</div>
+
+<div class = "row">
+  <div class="sort column">
+    <p> Sort by:
+      <select ng-model="$ctrl.orderProp">
+        <option value="name">Name</option>
+        <option value="msrpInCents">Price</option>
+        <option value="createdAt">Date</option>
+      </select>
+    </p>
+    <span>Filter:</span>
+      <div ng-repeat="price in $ctrl.getPrice()">
+        <label>
+          <input type="checkbox" ng-model="$ctrl.filter[price]"/>
+          {{price | monetaryUnit}}
+        </label>
+      </div>
+    </div>
+
+  <div class="content column">
+    <div class="products" ng-repeat="products in $ctrl.products | orderBy:$ctrl.orderProp | filter: $ctrl.filterByPrice">
+      <img ng-src="{{products.mainImage.ref}}" alt="{{products.name}}"/>
+      <p>{{products.name}}</p>
+      <p>Price: {{products.msrpInCents | monetaryUnit}}</p>
+      <p>{{products.createdAt | date : 'medium'}}</<p>
+    </div>
+  </div>
+</div>

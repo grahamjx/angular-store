@@ -1,0 +1,29 @@
+{
+  "name": "angular-store",
+  "version": "1.0.0",
+  "description": "Simple store page via product feed",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grahamjx/angular-store.git"
+  },
+  "author": "Joel Graham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grahamjx/angular-store/issues"
+  },
+  "homepage": "https://github.com/grahamjx/angular-store#readme",
+  "dependencies": {
+    "angular": "^1.5.9"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server ./app -a localhost -p 8000 -c-1"
+  }
+}

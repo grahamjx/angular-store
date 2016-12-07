@@ -1,0 +1,62 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.row::before,
+.row::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+body {
+  background: #D3D3D3;
+  color: #333333;
+  font-size: 1.3em;
+  padding: 0 10px;
+}
+
+.column {
+  border: 1px solid #666;
+  background: #F6F6F6;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.title {
+  text-align: center;
+  background-color: #333333;
+  color: #D3D3D3;
+}
+
+img {
+  height: auto;
+  max-width: 60%;
+}
+
+.products {
+  text-align: center;
+}
+
+/* Styling applied to screen widths larger than a mobile device:
+   tablet, laptop, desktop, etc.
+*/
+
+@media only screen and (min-width: 700px) {
+  .sort {
+    width: 10%;
+  }
+  .content {
+    width: 90%;
+  }
+  .products,
+  .column {
+    float: left;
+  }
+}
