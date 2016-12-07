@@ -29,4 +29,4 @@ This project is a simple store page built using Angular. No build system (bower,
 ###To-Do / Improvements
 
 1. Integrate unit testing via frameworks like Jasmine.
-2. Utilize webpack for html minifcation, bundling and other process improvements.
+2. Utilize build/package system (webpack) for html minifcation, bundling and other process improvements.
